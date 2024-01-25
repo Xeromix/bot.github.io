@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#8ccfff">
+    <meta name="keywords" content="discord economy bot discord, дискорд бот экономический, дискорд бот Елена, экономический бот дискорд бот Елена, economy discord bot Elena, Сайт дискорд бота Елена, discord bot, экономический дискорд бот для ваших желаний, discord bot economy, SEO">
+    <link rel="icon" type="image/x-icon" href={{ url_for('static', filename='bot for.png') }}>
+    <meta name="description" content="Сайт дискорд бота Елена, discord bot, экономический дискорд бот для ваших желаний, discord bot economy">
+    <title>Бот дискорд Елена - Discord bot discord Elena</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            background-color: #121212;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #e5e5e5;
+            text-align: center;
+            display: inline-block;
+        }
+
+        p {
+            color: #d6d6d6;
+            line-height: 1.5;
+        }
+
+        .container {
+            background-color: #292828;
+            border: 2px solid #4f4f4f;
+            border-radius: 35px;
+            padding: 20px;
+            max-width: 75%;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            box-shadow: 0 0px 10px #454545;
+            transition: height 0.35s ease;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #333;
+            border: 2px solid #4f4f4f;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 15px;
+            transition: background-color 0.5s ease;
+        }
+
+        .input1 {
+          display: inline-block;
+          background-color: #333;
+          border: 2px solid #4f4f4f;
+          color: #fff;
+          padding: 10px 20px;
+          text-decoration: none;
+          border-radius: 15px;
+          transition: border-radius 0.5s ease;
+        }
+
+        input:hover,
+        input:focus {
+          outline: none;
+          border-radius: 20px;
+        }
+
+        .btn-center {
+            display: block;
+            margin: auto;
+            background-color: #333;
+            border: 2px solid #4f4f4f;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 15px;
+            transition: background-color 0.5s ease;
+        }
+
+        .btn-center:hover,
+        .btn:hover {
+            background-color: #555;
+            border-radius: 20px;
+        }
+
+        .tab {
+            overflow: hidden;
+            background-color: #292828;
+            border: 2px solid #4f4f4f;
+            border-radius: 35px;
+            margin-top: 20px;
+            transition: overflow 0.35s ease;
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: background-color 0.5s ease;
+            border-radius: 35px;
+            color: #d6d6d6;
+        }
+
+        .tab button:hover {
+            background-color: #555;
+            border-radius: 20px;
+        }
+
+        .tab button.active {
+            background-color: #333;
+            border-radius: 20px;
+        }
+
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            color: #d6d6d6;
+            transition: height 0.35s ease;
+        }
+
+        .footer {
+            background-color: #262626;
+            border: 2px solid #1c1c1c;
+            border-radius: 35px;
+            padding: 10px;
+            width: 30%;
+            height: 1%;
+            max-height: 2%;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            box-shadow: 0 0px 10px #1c1c1c;
+        }
+
+        img {
+            display: inline-block;
+            border: 2px solid #4f4f4f;
+            border-radius: 25px;
+            width: 33%; height: 33%;
+        }
+
+        .avatar {
+            display: inline-block;
+            border: 2px solid #4f4f4f;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            vertical-align: middle;
+        }
+
+        .avatar + h1 {
+            display: inline-block;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 2px solid #202020;
+            background-color: #181818;
+            color: white;
+            transition: all 0.3s ease-in-out;
+
+        }
+        th {
+            background-color: #5a32a3;
+            border-radius: 10px 0px 0px 0px;
+            color: white;
+        }
+        tr {
+            background-color: #181818;
+            color: white;
+
+        }
+
+        td:hover {
+            background-color: #1b1b1b;
+            color: white;
+        }
+
+        .accordion-group {
+            width: 80%;
+            padding: 10px;
+            background-color: #1c1c1c;
+            color: #fff;
+            border-radius: 8px;
+        }
+
+        .accordion-title {
+            padding: 4px 8px;
+            border-radius: 4px;
+            background-color: #363636;
+            border: none;
+            width: 100%;
+            margin-bottom: 10px;
+            text-align: left;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.35 ease;
+        }
+
+        .accordion-content {
+            height: auto;
+            overflow: hidden;
+            transition: height 0.35s ease;
+        }
+
+    </style>
+</head>
+<body>
+  
+    <div class="container">
+        <img src="{{ url_for('static', filename='avatar_bot.png') }}" class='avatar' alt="Картинка">
+        <h1>Экономик бот: "Елена"</h1>
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'bot')">Информация о боте</button>
+            <button class="tablinks" onclick="openTab(event, 'commands')">Обновления</button>
+            <button class="tablinks" onclick="openTab(event, 'updates')">Команды бота</button>
+            <button class="tablinks" onclick="openTab(event, 'rev')">Отзывы</button>
+        </div>
+
+
+
+
+        <div id="bot" class="tabcontent">
+            <h2>📃 Информация о боте</h2>
+            <p>Описание: Экономический бот, с русским интерфейсом</p>
+            <a href='https://discord.com/api/oauth2/authorize?client_id=1198636835027570828&permissions=8&scope=bot' class="btn">Добавить бота на сервер</a>
+            <h2>📊 Статистика бота: </h2>
+            <p>🙍‍♂️ Бота используют <b>{{ servers }}</b> серверов!</p>
+            <p>🙍‍♂️ Всего участников <b>{{ uses }}</b> участников!</p>
+            <p>💻 Использовано команд (за ссесию бота) <b>{{ commands }}</b> команд!</p>
+            <h2>📦 Как настроить магазин на сервере?: </h2>
+            <p>📦 Для перво начальной настройки введите <b>/магазин-настройка</b> так вы добавите роль на продажу</p>
+            <p>📦 Но для большей информации о настройки бота, просто введите команду <b>/хелп</b> и в разделе: Для создателя увидите</p>
+            <p>📦 Так же на сайте можно посмотреть <b>нажав на кнопку Команды</b> и вы увидите актуальный список команд!</p>
+            <h2>❔ Возникли вопросы?</h2>
+            <p>❔ Заходи в наш дискорд сервер и мы ответим на все вопросы</p>
+            <a href="https://discord.gg/YT2eGEq4" class="btn">Наш дискорд сервер</a>
+            <h2>Ну а что же у нас по примерам команд:</h2>
+            <p>[Картинка 1] Вот как выглядит команда /хелп - (у участника)</p>
+            <img src="{{ url_for('static', filename='image (5).png') }}" alt="Картинка">
+            <p>[Картинка 2] Вот как выглядит команда /работа</p>
+            <img src="{{ url_for('static', filename='image.png') }}" alt="Картинка">
+
+        </div>
+
+        <div id="commands" class="tabcontent">
+            <h2>Обновления бота</h2>
+            <p>Текущая версия: <b>1.0.0</b> Поэтому пока нету обновлений</p>
+            <p>Вы можете посмотреть в списке <b>Команд</b> что бы увидить какие команды были релизнуты!</p>
+
+
+            <div class='accordion-group'>
+                <div class='accordion'>
+                    <button class='accordion-title'>Обновление 1.1.0 (На будуйщее)</button>
+                    <div class='accordion-content'>
+                        <p>[+] Добавиться возможность редактировать текст разных команд</p>
+                        <p>[+] Добавиться возможность настроить прибываль</p>
+                        <p>[+] Добавиться возможность выключать команды на сервере</p>
+
+                    </div>
+                </div>
+
+                <div class='accordion'>
+                    <button class='accordion-title'>Обновление 1.0.0</button>
+                    <div class='accordion-content'>
+                        <p>[+] Релиз бота</p>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="updates" class="tabcontent">
+            <p>Команды для участников и создателей</p>
+            <h2>Команды для участников сервера</h2>
+            <table>
+            <tr>
+                <th>Команда</th>
+                <th style="border-radius: 0px 10px 0px 0px;">Описание</th>
+            </tr>
+            <tr>
+                <td>/работа</td>
+                <td>Пользователь под заработает бабла</td>
+            </tr>
+
+            <tr>
+                <td>/перевести</td>
+                <td>Переведет деньги пользователю</td>
+            </tr>
+
+            <tr>
+                <td>/казино</td>
+                <td>Азартные игры</td>
+            </tr>
+
+            <tr>
+                <td>/награда</td>
+                <td>Вы получите ежедневную награду в деньгах</td>
+            </tr>
+
+            <tr>
+                <td>/лидерборд</td>
+                <td>Вы увидите топ 10 участников по деньгам на сервере</td>
+            </tr>  
+            <tr>
+                <td>/бот</td>
+                <td>Вы увидите информацию о боте</td>
+            </tr>  
+            </table>
+
+            <h2>Команды для создателя</h2>
+
+            <table>
+                <tr>
+                    <th>Команда</th>
+                    <th style="border-radius: 0px 10px 0px 0px;">Описание</th>
+                </tr>
+                <tr>
+                    <td>/магазин-настройка</td>
+                    <td>Вы добавите товар(роль) в магазин на продажу за валюту</td>
+                </tr>
+
+                <tr>
+                    <td>/магазин-настройка-delete</td>
+                    <td>Вы удалите товар из магазина</td>
+                </tr>  
+            </table>
+        </div>
+        <div id="rev" class="tabcontent">
+          <form id="add-review-form">
+              <input type="text" id="review-input" class='input1' placeholder="Ваш отзыв... Максимум 100 символов!" required>
+              <input type="submit" class='btn' value="Отправить отзыв">
+          </form>
+  
+          <h1>Отзывы</h1>
+          <div class='accordion-group'>
+            
+            {% for review in reviews%}
+                <div class='accordion'>
+                  <button class='accordion-title'>{{ review }}</button>
+                </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <script>
+            function openTab(evt, tabName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(tabName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+        </script>
+
+        
+        <script>
+              $(document).ready(function() {
+                  $('#add-review-form').submit(function(e) {
+                      e.preventDefault();
+                      var review = $('#review-input').val();
+
+                      $.ajax({
+                          type: 'POST',
+                          url: '/add_review',
+                          data: { review: review },
+                          success: function() {
+                              location.reload();
+                          }
+                      });
+                  });
+              });
+        </script>
+    </div>
+</body>
+</html>

@@ -1,1 +1,1 @@
-main.py
+theme: jekyll-theme-THEME-NAME
